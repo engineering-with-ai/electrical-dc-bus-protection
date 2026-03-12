@@ -5,6 +5,8 @@ stages:
 
 checks:
   stage: check
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq libngspice0-dev > /dev/null
   script:
     - mkdir -p sim/results
     - uv run poe checks
