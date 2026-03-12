@@ -1,5 +1,8 @@
 # dc-bus-protection
 
+![](https://img.shields.io/gitlab/pipeline-status/engineering-with-ai/electrical-dc-bus-protection?branch=main&logo=gitlab)
+![](https://gitlab.com/engineering-with-ai/electrical-dc-bus-protection/badges/main/coverage.svg)
+
 48V DC bus fault current analysis and fuse coordination — determines peak fault current during a bolted short circuit at the load terminals and verifies the selected fuse clears before cable damage.
 
 The hand calc uses Ohm's law on the resistive loop (V_bus / R_total) to get the steady-state fault current. Cable inductance only slows the rise — it doesn't change the peak. The PySpice/ngspice transient simulation confirms the RL waveform matches the analytical solution and that the fault I²t exceeds the fuse melting I²t by ~10x.
