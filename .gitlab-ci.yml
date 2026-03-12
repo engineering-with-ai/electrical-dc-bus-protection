@@ -26,6 +26,7 @@ mirror:
     GIT_STRATEGY: clone
     GIT_DEPTH: 0
   script:
+    - git checkout -B main
     - git push --mirror git@github.com:engineering-with-ai/electrical-dc-bus-protection.git
   only:
     - main
